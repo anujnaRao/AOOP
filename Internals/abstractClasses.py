@@ -46,28 +46,28 @@ class Division(mainCaculation):
 a = []
 b = []
 
-n=int(input("Enter the n value: "))
+n = int(input("Enter the n value: "))
 
 print("Enter first list: ")
-for i in range(0,n):
+for i in range(0, n):
     a.append(int(input()))
 
 print("Enter the second list: ")
-for i in range(0,n):
+for i in range(0, n):
     b.append(int(input()))
 
 while True:
     print("1. Add\n2. Sub\n3. Multiply\n4. Division\n5. Exit")
-    ch=int(input("Enter your choice: "))
+    ch = int(input("Enter your choice: "))
     if ch == 1:
-        Addition(a,b).calculate()
-    elif ch==2:
-        Subtraction(a,b).calculate()
-    elif ch==3:
-        Multiplication(a,b).calculate()
-    elif ch==4:
-        Division(a,b).calculate()
-    elif ch==5:
+        Addition(a, b).calculate()
+    elif ch == 2:
+        Subtraction(a, b).calculate()
+    elif ch == 3:
+        Multiplication(a, b).calculate()
+    elif ch == 4:
+        Division(a, b).calculate()
+    elif ch == 5:
         break
     else:
         print("Invalid choice ")
