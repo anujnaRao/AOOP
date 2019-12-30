@@ -1,7 +1,7 @@
 import abc as x
 
 
-class mainCaculation(x.ABC):
+class MainCaculation(x.ABC):
     def __init__(self, a, b):
         self.a = a
         self.b = b
@@ -11,7 +11,7 @@ class mainCaculation(x.ABC):
         pass
 
 
-class Addition(mainCaculation):
+class Addition(MainCaculation):
     def calculate(self):
         sum = []
         for i in range(0, len(self.a)):
@@ -19,7 +19,7 @@ class Addition(mainCaculation):
         print("Sum is : ", sum)
 
 
-class Subtraction(mainCaculation):
+class Subtraction(MainCaculation):
     def calculate(self):
         sub = []
         for i in range(0, len(self.a)):
@@ -27,7 +27,7 @@ class Subtraction(mainCaculation):
         print("Subtracted value is : ", sub)
 
 
-class Multiplication(mainCaculation):
+class Multiplication(MainCaculation):
     def calculate(self):
         mul = []
         for i in range(0, len(self.a)):
@@ -35,7 +35,7 @@ class Multiplication(mainCaculation):
         print("Product is : ", mul)
 
 
-class Division(mainCaculation):
+class Division(MainCaculation):
     def calculate(self):
         div = []
         for i in range(0, len(self.a)):
