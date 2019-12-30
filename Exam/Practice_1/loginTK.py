@@ -15,9 +15,9 @@ def login():
     pwd = pswd.get()
 
     if user == 'rvce' and pwd == '1234':
-        mg.showinfo("Logged in Successfully")
+        mg.showinfo("Log In", "Logged in Successfully")
     else:
-        mg.showerror("Wrong Username or Password")
+        mg.showerror("Error", "Wrong Username or Password")
 
 
 def cancel():
@@ -25,15 +25,13 @@ def cancel():
     pswd.set('')
 
 
-l1 = Label(top, text="Username").grid()
-username = Entry(textvariable=uname)
+l1 = Label(top, text="Username").grid(row=0,column=0)
+username = Entry(textvariable=uname).grid(row=0,column=1)
 
-l2 = Label(top, text="Password")
-password = Entry(textvariable=pswd, show="*")
+l2 = Label(top, text="Password").grid(row=1,column=0)
+password = Entry(textvariable=pswd, show="*").grid(row=1,column=1)
 
-b1 = Button(top, text="OK", command=login)
-b2 = Button(top, text="Cancel", command=cancel)
-
-pack()
+b1 = Button(top, text="OK", command=login).grid(row=2,column=0)
+b2 = Button(top, text="Cancel", command=cancel).grid(row=2,column=1)
 
 top.mainloop()

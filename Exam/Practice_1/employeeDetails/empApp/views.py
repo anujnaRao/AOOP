@@ -12,11 +12,11 @@ class HomePage(TemplateView):
 
 class DisplayPage(TemplateView):
     def get(self, request, **kwargs):
-        usn = request.GET['USN']
-        name = request.GET['Name']
-        addr = request.GET['Address']
+        usn = request.GET['usn']
+        name = request.GET['name']
+        addr = request.GET['addr']
 
-        e = Employee(usn='usn', name='name', address='addr')
+        e = Employee(USN=usn, Name=name, Address=addr)
 
         e.save()
 
