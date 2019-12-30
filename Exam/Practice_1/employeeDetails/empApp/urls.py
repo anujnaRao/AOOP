@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path
 from empApp import views
-from empApp.views import HomePage, DisplayPage
+from empApp.views import HomePage, InsertPage
 
 urlpatterns = [
-    path('', HomePage.as_view()),
-    path('display/', DisplayPage.as_view(), name='display'),
+    path('', HomePage.as_view(),name='home'),
+    path('insert/', InsertPage.as_view(), name='insert'),
+    path('show/', views.show, name='show')
 ]
