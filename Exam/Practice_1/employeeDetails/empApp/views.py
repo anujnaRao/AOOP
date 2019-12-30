@@ -6,16 +6,17 @@ from empApp.models import Employee
 # Create your views here.
 
 class HomePage(TemplateView):
-    def get(self,request,**kwargs):
-        return render(request,'home.html',context=None)
+    def get(self, request, **kwargs):
+        return render(request, 'home.html', context=None)
+
 
 class DisplayPage(TemplateView):
     def get(self, request, **kwargs):
-        usn = request.GET['usn']
-        name = request.GET['name']
-        addr = request.GET['addr']
+        usn = request.GET['USN']
+        name = request.GET['Name']
+        addr = request.GET['Address']
 
-        e = Employee(usn=usn, name=name, address=addr)
+        e = Employee(usn='usn', name='name', address='addr')
 
         e.save()
 
