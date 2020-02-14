@@ -19,7 +19,7 @@ from alumniApp import views
 from alumniApp.views import HomePage,DisplayPage
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('', HomePage.as_view(), name="home"),
     path('display/', DisplayPage.as_view(), name='display'),
 ]
